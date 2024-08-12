@@ -8,16 +8,16 @@ export default defineUserConfig({
   title: 'VuePress',
   description: 'VuePress教程',
   base: "/LearnVuePress/",
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
 
   head: [['link', { rel: 'icon', href: '/img/favicon.png' }]],
 
   theme: defaultTheme({
     logo: '/img/logo.gif',
-    locales: {
-      '/': {
-        lang: 'zh-CN'
-      }
-    },
 
     navbar: [
       { text: "首页", link: '/' },
