@@ -7,13 +7,17 @@ date: '2024-08-09'
 
 [[TOC]]
 
-# 1.环境准备
+# VuePress入门
+
+
+
+## 1.环境准备
 
 1. 需要 `Node.js v18.16.0+`，这里选择了 `Node.js v18.20.4(Long Term Support)`。`nvm install 18.20.4`，下载的时候如果报错可以将代理设为全局试试。
 2. `nvm use 18.20.4`
 3. 包管理器可选npm、yarn、pnpm，官网举例用的是pnpm，这里便用它。npm install -g pnpm
 
-# 2.创建项目
+## 2.创建项目
 
 通过脚手架创建项目（也可以一步步创建，[参考官网](https://vuepress.github.io/zh/guide/getting-started.html#创建项目)）：
 
@@ -21,13 +25,13 @@ date: '2024-08-09'
 
 这里会有一些选项，其中vite跟webpack之间我选了vite，构建过程中会询问是否添加github工作流(workflows)，这里选择生成这个文件（文件里有个branches要跟项目实际分支对应上，默认为main，我的项目是master就需要在这里改成master）。
 
-# 3.运行项目
+## 3.运行项目
 
 `pnpm docs:dev`
 
 如果有警告说版本依赖不对，比如`vuepress` 是2.0.0-rc.14的，那么他需要的 `@vuepress/bundler-vite` 也是这一版本号，但是我通过脚手架安装的是2.0.0-rc.7的，那么就安装一遍那个高版本的 `@vuepress/bundler-vite` （一定要注意当前shell脚本所在目录，我第一次就搞错目录了，又删了重新执行的）
 
-# 4.修改配置
+## 4.修改配置
 
 VuePress 站点的基本配置文件是 `.vuepress/config.js`
 
@@ -77,7 +81,7 @@ export default defineUserConfig({
 
 
 
-# 5.生成Token
+## 5.生成Token
 
 1. 点击头像，点击`settings`
 
@@ -107,7 +111,7 @@ export default defineUserConfig({
 
 ![result](img/6.png)
 
-# 6.设置Secrets
+## 6.设置Secrets
 
 1. 到项目仓库中，点击`settings => Secrets and variables => Actions => New repository secret`
 
@@ -127,7 +131,7 @@ export default defineUserConfig({
 
 
 
-# 7.提交代码
+## 7.提交代码
 
 提交本地代码到github仓库，这里注意分支名字问题，github默认为main分支，本地默认为master分支，要处理。
 
@@ -194,7 +198,7 @@ jobs:
 
 
 
-# 8.配置Github Pages
+## 8.配置Github Pages
 
 CI完成后会将文档部署到`gh-pages`分支
 
