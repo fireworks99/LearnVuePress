@@ -20,7 +20,7 @@ date: '2024-08-09'
 <CodeGroup>
   <CodeGroupItem title="选项式">
 
-```vue
+```js
 <script>
 export default {
   data() {
@@ -30,9 +30,10 @@ export default {
   }
 }
 </script>
+```
 
+```vue-html
 <template>
-  {{ count }}
   <button @click="count++">Count is: {{ count }}</button>
 </template>
 ```
@@ -41,15 +42,16 @@ export default {
 
   <CodeGroupItem title="组合式">
 
-```vue
+```js
 <script setup>
 import { ref } from 'vue'
 
 const count = ref(0)
 </script>
+```
 
+```vue-html
 <template>
-  {{ count }}
   <button @click="count++">Count is: {{ count }}</button>
 </template>
 ```
@@ -80,6 +82,33 @@ const count = ref(0)
 ```scss title=".vuepress/styles/palette.scss"
 :root {
   --c-code-group-tab-bg: var(--code-c-bg);
+
+  --vt-shadow-1: 0 1px 2px rgba(0, 0, 0, .04), 0 1px 2px rgba(0, 0, 0, .06);
+  --vt-shadow-2: 0 3px 12px rgba(0, 0, 0, .07), 0 1px 4px rgba(0, 0, 0, .07);
+  --vt-shadow-3: 0 12px 32px rgba(0, 0, 0, .1), 0 2px 6px rgba(0, 0, 0, .08);
+  --vt-shadow-4: 0 14px 44px rgba(0, 0, 0, .12), 0 3px 9px rgba(0, 0, 0, .12);
+  --vt-shadow-5: 0 18px 56px rgba(0, 0, 0, .16), 0 4px 12px rgba(0, 0, 0, .16);
+
+  --vt-c-bg: var(--vt-c-white);
+  --vt-c-bg-soft: var(--vt-c-white-soft);
+  --vt-c-bg-mute: var(--vt-c-white-mute);
+  --vt-c-divider: var(--vt-c-divider-light-1);
+  --vt-c-divider-light: var(--vt-c-divider-light-2);
+  --vt-c-divider-inverse: var(--vt-c-divider-dark-1);
+  --vt-c-divider-inverse-light: var(--vt-c-divider-dark-2);
+  --vt-c-text-1: var(--vt-c-text-light-1);
+  --vt-c-text-2: var(--vt-c-text-light-2);
+  --vt-c-text-3: var(--vt-c-text-light-3);
+  --vt-c-text-4: var(--vt-c-text-light-4);
+  --vt-c-text-code: var(--vt-c-text-light-code);
+  --vt-c-text-inverse-1: var(--vt-c-text-dark-1);
+  --vt-c-text-inverse-2: var(--vt-c-text-dark-2);
+  --vt-c-text-inverse-3: var(--vt-c-text-dark-3);
+  --vt-c-text-inverse-4: var(--vt-c-text-dark-4);
+  --vt-c-brand: var(--vt-c-green);
+  --vt-c-brand-light: var(--vt-c-green-light);
+  --vt-c-brand-dark: var(--vt-c-green-dark);
+  --vt-c-brand-highlight: var(--vt-c-brand-dark);
 }
 ```
 
@@ -99,6 +128,7 @@ const count = ref(0)
     border-radius: 8px;
     font-size: .9em;
     font-weight: 600;
+    cursor: pointer;
   }
 }
 ```
