@@ -18,34 +18,40 @@ date: '2024-08-09'
 
 
 <CodeGroup>
-  <CodeGroupItem title="选项式API">
+  <CodeGroupItem title="选项式">
 
-```js
-import { createApp } from 'vue'
-
-createApp({
+```vue
+<script>
+export default {
   data() {
     return {
       count: 0
     }
   }
-}).mount('#app')
+}
+</script>
+
+<template>
+  {{ count }}
+  <button @click="count++">Count is: {{ count }}</button>
+</template>
 ```
 
   </CodeGroupItem>
 
-  <CodeGroupItem title="组合式API">
+  <CodeGroupItem title="组合式">
 
-```js
-import { createApp, ref } from 'vue'
+```vue
+<script setup>
+import { ref } from 'vue'
 
-createApp({
-  setup() {
-    return {
-      count: ref(0)
-    }
-  }
-}).mount('#app')
+const count = ref(0)
+</script>
+
+<template>
+  {{ count }}
+  <button @click="count++">Count is: {{ count }}</button>
+</template>
 ```
 
   </CodeGroupItem>
@@ -70,6 +76,32 @@ const count = ref(0)
 
 [样式](https://ecosystem.vuejs.press/zh/themes/default/styles.html)
 
+
+```scss title=".vuepress/styles/palette.scss"
+:root {
+  --c-code-group-tab-bg: var(--code-c-bg);
+}
+```
+
+```scss title=".vuepress/styles/index.scss"
+.demo {
+  padding: 22px 24px;
+  border-radius: 8px;
+  box-shadow: var(--vt-shadow-2);
+  margin-bottom: 1.2em;
+  transition: background-color .5s ease;
+
+  button {
+    background-color: var(--vt-c-bg-mute);
+    transition: background-color .5s;
+    padding: 5px 12px;
+    border: 1px solid var(--vt-c-divider);
+    border-radius: 8px;
+    font-size: .9em;
+    font-weight: 600;
+  }
+}
+```
 
 ## 3.其他
 

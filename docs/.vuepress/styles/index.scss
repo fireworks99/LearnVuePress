@@ -1,0 +1,17 @@
+.demo {
+  padding: 22px 24px;
+  border-radius: 8px;
+  box-shadow: var(--vt-shadow-2);
+  margin-bottom: 1.2em;
+  transition: background-color .5s ease;
+
+  button {
+    background-color: var(--vt-c-bg-mute);
+    transition: background-color .5s;
+    padding: 5px 12px;
+    border: 1px solid var(--vt-c-divider);
+    border-radius: 8px;
+    font-size: .9em;
+    font-weight: 600;
+  }
+}
