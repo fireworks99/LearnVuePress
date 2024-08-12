@@ -66,5 +66,10 @@ const count = ref(0)
 </div>
 
 
-## 2.其他
+## 2.修改样式
+
+[样式](https://ecosystem.vuejs.press/zh/themes/default/styles.html)
+
+
+## 3.其他
 
