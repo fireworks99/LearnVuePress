@@ -35,6 +35,10 @@ export default defineUserConfig({
       "/post/extension"
     ],
 
+    plugins: [
+      ['@vuepress/plugin-toc']
+    ],
+
     markdown: {
       toc: {
         level: [2, 3]
