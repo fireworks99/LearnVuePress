@@ -7,7 +7,7 @@ date: '2024-08-09'
 
 # VuePress入门
 
-
+<TOC :include-level="[2, 3]" />
 
 ## 1.环境准备
 
