@@ -35,6 +35,12 @@ export default defineUserConfig({
       "/post/extension"
     ],
 
+    markdown: {
+      headers: {
+        level: [2, 3, 4]
+      }
+    },
+
   }),
 
   bundler: viteBundler(),
