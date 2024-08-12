@@ -17,35 +17,53 @@ date: '2024-08-09'
 
 
 
-_你好， {{ msg }}_
+<CodeGroup>
+  <CodeGroupItem title="选项式API">
 
-<RedDiv>
+```js
+import { createApp } from 'vue'
 
-_当前计数为： {{ count }}_
+createApp({
+  data() {
+    return {
+      count: 0
+    }
+  }
+}).mount('#app')
+```
 
-</RedDiv>
+  </CodeGroupItem>
 
-<button @click="count++">点我！</button>
+  <CodeGroupItem title="组合式API">
+
+```js
+import { createApp, ref } from 'vue'
+
+createApp({
+  setup() {
+    return {
+      count: ref(0)
+    }
+  }
+}).mount('#app')
+```
+
+  </CodeGroupItem>
+
+</CodeGroup>
+
+**结果展示**
 
 <script setup>
-import { h, ref } from 'vue'
-const RedDiv = (_, ctx) =>
-  h(
-    'div',
-    {
-      class: 'red-div',
-    },
-    ctx.slots.default(),
-  )
-const msg = 'Markdown 中的 Vue'
+import { ref } from 'vue'
 const count = ref(0)
 </script>
-<style>
-.red-div {
-  color: red;
-}
-</style>
 
+<div class="demo">
+  <button @click="count++">
+    Count is: {{ count }}
+  </button>
+</div>
 
 
 ## 2.其他
