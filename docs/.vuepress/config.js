@@ -33,7 +33,9 @@ export default defineUserConfig({
     sidebar: [
       "/post/junior",
       "/post/extension"
-    ]
+    ],
+
+    level: [1, 2, 3, 4, 5, 6],
   }),
 
   bundler: viteBundler(),

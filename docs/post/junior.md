@@ -1,8 +1,11 @@
 ---
 title: 入门
+lang: zh-CN
 author: fireworks99
 date: '2024-08-09'
 ---
+
+[[TOC]]
 
 # 1.环境准备
 
