@@ -3,41 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="generator" content="VuePress 2.0.0-rc.14" />
+    <meta name="generator" content="VuePress 2.0.0-rc.20" />
     <style>
       :root {
-        --c-bg: #fff;
+        --vp-c-bg: #fff;
       }
 
-      html.dark {
-        --c-bg: #22272e;
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
       }
 
       html,
       body {
-        background-color: var(--c-bg);
+        background-color: var(--vp-c-bg);
       }
     </style>
     <script>
-      const userMode = localStorage.getItem('vuepress-color-scheme')
-      const systemDarkMode =
-        window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
 
-      if (userMode === 'light') {
+      if (useChoice === 'light') {
         document.documentElement.dataset.theme = 'light'
-      } else if (userMode === 'dark' || systemDarkMode) {
-        document.documentElement.classList.toggle('dark', true)
+      } else if (useChoice === 'dark' || systemStatus) {
         document.documentElement.dataset.theme = 'dark'
       }
     </script>
     <link rel="icon" href="/img/favicon.png"><title>VuePress</title><meta name="description" content="VuePress教程">
-    <link rel="preload" href="/LearnVuePress/assets/style-vuE5makM.css" as="style"><link rel="stylesheet" href="/LearnVuePress/assets/style-vuE5makM.css">
-    <link rel="modulepreload" href="/LearnVuePress/assets/app-Bf0CG8G0.js"><link rel="modulepreload" href="/LearnVuePress/assets/404.html-FJ_t2m9C.js">
-    <link rel="prefetch" href="/LearnVuePress/assets/index.html-BTo4hE8f.js" as="script"><link rel="prefetch" href="/LearnVuePress/assets/extension.html-Ba74hLDr.js" as="script"><link rel="prefetch" href="/LearnVuePress/assets/junior.html-D953hroe.js" as="script">
+    <link rel="preload" href="/LearnVuePress/assets/style-ZjSCFvHy.css" as="style"><link rel="stylesheet" href="/LearnVuePress/assets/style-ZjSCFvHy.css">
+    <link rel="modulepreload" href="/LearnVuePress/assets/app-C4ey46fn.js"><link rel="modulepreload" href="/LearnVuePress/assets/404.html-CXso4HHS.js">
+    <link rel="prefetch" href="/LearnVuePress/assets/index.html-DrfW2Ugt.js" as="script"><link rel="prefetch" href="/LearnVuePress/assets/extension.html-BdbGHkHl.js" as="script"><link rel="prefetch" href="/LearnVuePress/assets/junior.html-Didee87_.js" as="script">
   </head>
   <body>
-    <div id="app"><!--[--><div class="vp-theme-container" data-v-0c01291c><main class="page" data-v-0c01291c><div class="theme-default-content" data-v-0c01291c><h1 data-v-0c01291c>404</h1><blockquote data-v-0c01291c>That&#39;s a Four-Oh-Four.</blockquote><a class="route-link" href="/LearnVuePress/" data-v-0c01291c>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
-    <script type="module" src="/LearnVuePress/assets/app-Bf0CG8G0.js" defer></script>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-2a6238b5><main class="page" data-v-2a6238b5><div vp-content data-v-2a6238b5><h1 data-v-2a6238b5>404</h1><blockquote data-v-2a6238b5>Looks like we&#39;ve got some broken links.</blockquote><a class="route-link" href="/LearnVuePress/" data-v-2a6238b5>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/LearnVuePress/assets/app-C4ey46fn.js" defer></script>
   </body>
 </html>
