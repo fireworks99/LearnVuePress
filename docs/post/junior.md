@@ -142,7 +142,6 @@ export default defineUserConfig({
 > 补充：VuePress脚手架创建的CI工作流可直接拿来用，除了branches要注意外，其他的都不用改。
 
 ~~~yml
-
 name: 部署文档
 
 on:
@@ -214,3 +213,59 @@ CI完成后会将文档部署到`gh-pages`分支
 
 ![完成](img/13.png)
 
+
+## 补充说明
+
+8个月后的今天发现，如果就是把 VuePress 生成的静态网站部署到这个项目本身的 gh-pages 分支，可以直接使用 GITHUB_TOKEN，不用创建个人 token，也就是第5、6步不需要做，相应的第7步工作流如下：
+
+~~~yml
+name: 部署文档
+
+on:
+  push:
+    branches:
+      # 确保这是你正在使用的分支名称
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-gh-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          # 如果你文档需要 Git 子模块，取消注释下一行
+          # submodules: true
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: true
+          version: 8
+
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: pnpm
+
+
+      - name: 构建文档
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: |-
+          pnpm run docs:build
+          > docs/.vuepress/dist/.nojekyll
+
+
+      - name: 部署文档
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.vuepress/dist
+~~~
