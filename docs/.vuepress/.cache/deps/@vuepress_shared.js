@@ -1,16 +1,16 @@
-// node_modules/.pnpm/@vuepress+shared@2.0.0-rc.14/node_modules/@vuepress/shared/dist/index.js
+// node_modules/.pnpm/@vuepress+shared@2.0.0-rc.21/node_modules/@vuepress/shared/dist/index.js
 var isLinkWithProtocol = (link) => /^[a-z][a-z0-9+.-]*:/.test(link) || link.startsWith("//");
 var markdownLinkRegexp = /.md((\?|#).*)?$/;
 var isLinkExternal = (link, base = "/") => isLinkWithProtocol(link) || // absolute link that does not start with `base` and does not end with `.md`
 link.startsWith("/") && !link.startsWith(base) && !markdownLinkRegexp.test(link);
 var isLinkHttp = (link) => /^(https?:)?\/\//.test(link);
-var inferRoutePath = (path) => {
-  if (!path || path.endsWith("/")) return path;
-  let routePath = path.replace(/(^|\/)README.md$/i, "$1index.html");
+var inferRoutePath = (rawPath) => {
+  if (!rawPath || rawPath.endsWith("/")) return rawPath;
+  let routePath = rawPath.replace(/(^|\/)README.md$/i, "$1index.html");
   if (routePath.endsWith(".md")) {
-    routePath = routePath.substring(0, routePath.length - 3) + ".html";
+    routePath = `${routePath.substring(0, routePath.length - 3)}.html`;
   } else if (!routePath.endsWith(".html")) {
-    routePath = routePath + ".html";
+    routePath = `${routePath}.html`;
   }
   if (routePath.endsWith("/index.html")) {
     routePath = routePath.substring(0, routePath.length - 10);
@@ -90,8 +90,8 @@ var dedupeHead = (head) => {
   });
   return result;
 };
-var ensureLeadingSlash = (str) => str[0] === "/" ? str : `/${str}`;
-var ensureEndingSlash = (str) => str[str.length - 1] === "/" || str.endsWith(".html") ? str : `${str}/`;
+var ensureLeadingSlash = (str) => str.startsWith("/") ? str : `/${str}`;
+var ensureEndingSlash = (str) => str.endsWith("/") || str.endsWith(".html") ? str : `${str}/`;
 var formatDateString = (str, defaultDateString = "") => {
   const dateMatch = str.match(/\b(\d{4})-(\d{1,2})-(\d{1,2})\b/);
   if (dateMatch === null) {
@@ -107,8 +107,8 @@ var omit = (obj, ...keys) => {
   }
   return result;
 };
-var removeEndingSlash = (str) => str[str.length - 1] === "/" ? str.slice(0, -1) : str;
-var removeLeadingSlash = (str) => str[0] === "/" ? str.slice(1) : str;
+var removeEndingSlash = (str) => str.endsWith("/") ? str.slice(0, -1) : str;
+var removeLeadingSlash = (str) => str.startsWith("/") ? str.slice(1) : str;
 var isFunction = (val) => typeof val === "function";
 var isPlainObject = (val) => Object.prototype.toString.call(val) === "[object Object]";
 var isString = (val) => typeof val === "string";

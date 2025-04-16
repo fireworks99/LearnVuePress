@@ -15,7 +15,7 @@
 <p>如果有警告说版本依赖不对，比如<code v-pre>vuepress</code> 是2.0.0-rc.14的，那么他需要的 <code v-pre>@vuepress/bundler-vite</code> 也是这一版本号，但是我通过脚手架安装的是2.0.0-rc.7的，那么就安装一遍那个高版本的 <code v-pre>@vuepress/bundler-vite</code> （一定要注意当前shell脚本所在目录，我第一次就搞错目录了，又删了重新执行的）</p>
 <h2 id="_4-修改配置" tabindex="-1"><a class="header-anchor" href="#_4-修改配置"><span>4.修改配置</span></a></h2>
 <p>VuePress 站点的基本配置文件是 <code v-pre>.vuepress/config.js</code></p>
-<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js" data-title="js"><pre v-pre><code><span class="line"><span class="token keyword">import</span> <span class="token punctuation">{</span> defaultTheme <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vuepress/theme-default'</span></span>
+<div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token keyword">import</span> <span class="token punctuation">{</span> defaultTheme <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vuepress/theme-default'</span></span>
 <span class="line"><span class="token keyword">import</span> <span class="token punctuation">{</span> defineUserConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuepress/cli'</span></span>
 <span class="line"><span class="token keyword">import</span> <span class="token punctuation">{</span> viteBundler <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vuepress/bundler-vite'</span></span>
 <span class="line"></span>
@@ -108,7 +108,7 @@
 <blockquote>
 <p>补充：VuePress脚手架创建的CI工作流可直接拿来用，除了branches要注意外，其他的都不用改。</p>
 </blockquote>
-<div class="language-yaml line-numbers-mode" data-highlighter="prismjs" data-ext="yml" data-title="yml"><pre v-pre><code><span class="line"><span class="token key atrule">name</span><span class="token punctuation">:</span> 部署文档</span>
+<div class="language-yaml line-numbers-mode" data-highlighter="prismjs" data-ext="yml"><pre v-pre><code><span class="line"><span class="token key atrule">name</span><span class="token punctuation">:</span> 部署文档</span>
 <span class="line"></span>
 <span class="line"><span class="token key atrule">on</span><span class="token punctuation">:</span></span>
 <span class="line">  <span class="token key atrule">push</span><span class="token punctuation">:</span></span>
@@ -169,7 +169,7 @@
 <p><img src="@source/post/img/13.png" alt="完成"></p>
 <h2 id="补充说明" tabindex="-1"><a class="header-anchor" href="#补充说明"><span>补充说明</span></a></h2>
 <p>8个月后的今天发现，如果就是把 VuePress 生成的静态网站部署到这个项目本身的 gh-pages 分支，可以直接使用 GITHUB_TOKEN，不用创建个人 token，也就是第5、6步不需要做，相应的第7步工作流如下：</p>
-<div class="language-yaml line-numbers-mode" data-highlighter="prismjs" data-ext="yml" data-title="yml"><pre v-pre><code><span class="line"><span class="token key atrule">name</span><span class="token punctuation">:</span> 部署文档</span>
+<div class="language-yaml line-numbers-mode" data-highlighter="prismjs" data-ext="yml"><pre v-pre><code><span class="line"><span class="token key atrule">name</span><span class="token punctuation">:</span> 部署文档</span>
 <span class="line"></span>
 <span class="line"><span class="token key atrule">on</span><span class="token punctuation">:</span></span>
 <span class="line">  <span class="token key atrule">push</span><span class="token punctuation">:</span></span>
