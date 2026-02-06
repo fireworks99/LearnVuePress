@@ -2,6 +2,11 @@ import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { searchPlugin } from '@vuepress/plugin-search'
+import { markdownTabPlugin } from '@vuepress/plugin-markdown-tab'
+import { fileURLToPath } from 'url'
+import path from 'path'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -33,13 +38,28 @@ export default defineUserConfig({
 
     sidebar: [
       "/post/junior",
-      "/post/extension"
+      "/post/extension",
+      "/post/stream"
     ],
 
   }),
 
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      resolve: {
+        alias: {
+          '@docs': path.resolve(__dirname, '../')
+        }
+      }
+    }
+  }),
   plugins: [
-    searchPlugin({})
+    searchPlugin({}),
+    markdownTabPlugin({
+      // 启用代码选项卡
+      codeTabs: true,
+      // 启用选项卡
+      tabs: true,
+    }),
   ]
 })

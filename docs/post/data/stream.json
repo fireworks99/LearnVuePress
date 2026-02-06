@@ -1,0 +1,226 @@
+{
+  "name": "公司高层",
+  "label": {
+    "position": "top"
+  },
+  "children": [
+    {
+      "name": "人力资源中心",
+      "lineStyle": {
+        "color": "red",
+        "type": "solid"
+      },
+      "children": [
+        {
+          "name": "招聘部",
+          "lineStyle": {
+            "color": "red",
+            "type": "dashed"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "培训部",
+          "lineStyle": {
+            "color": "red",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "薪酬福利部",
+          "lineStyle": {
+            "color": "red",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "员工关系部",
+          "lineStyle": {
+            "color": "red",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        }
+      ],
+      "label": {
+        "position": "top"
+      }
+    },
+    {
+      "name": "软件技术中心",
+      "lineStyle": {
+        "color": "green",
+        "type": "solid"
+      },
+      "children": [
+        {
+          "name": "需求部",
+          "lineStyle": {
+            "color": "green",
+            "type": "dashed"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "开发部",
+          "lineStyle": {
+            "color": "green",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "测试部",
+          "lineStyle": {
+            "color": "green",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "运维部",
+          "lineStyle": {
+            "color": "green",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        }
+      ],
+      "label": {
+        "position": "top"
+      }
+    },
+    {
+      "name": "硬件生产中心",
+      "lineStyle": {
+        "color": "green",
+        "type": "solid"
+      },
+      "children": [
+        {
+          "name": "研发设计部",
+          "lineStyle": {
+            "color": "green",
+            "type": "dashed"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "生产制造部",
+          "lineStyle": {
+            "color": "green",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "质量控制部",
+          "lineStyle": {
+            "color": "green",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "供应链管理部",
+          "lineStyle": {
+            "color": "green",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        }
+      ],
+      "label": {
+        "position": "top"
+      }
+    },
+    {
+      "name": "市场营销中心",
+      "lineStyle": {
+        "color": "red",
+        "type": "solid"
+      },
+      "children": [
+        {
+          "name": "市场调研部",
+          "lineStyle": {
+            "color": "red",
+            "type": "dashed"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "品牌推广部",
+          "lineStyle": {
+            "color": "red",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        },
+        {
+          "name": "销售部",
+          "lineStyle": {
+            "color": "red",
+            "type": "solid"
+          },
+          "label": {
+            "position": "right"
+          }
+        }
+      ],
+      "label": {
+        "position": "top"
+      }
+    },
+    {
+      "name": "财务中心",
+      "lineStyle": {
+        "color": "red",
+        "type": "solid"
+      },
+      "label": {
+        "position": "right"
+      }
+    },
+    {
+      "name": "客户服务中心",
+      "lineStyle": {
+        "color": "red",
+        "type": "dashed"
+      },
+      "label": {
+        "position": "right"
+      }
+    }
+  ]
+}

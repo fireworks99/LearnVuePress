@@ -1,37 +1,46 @@
 {
-  "hash": "b4201f57",
-  "configHash": "d30c2854",
-  "lockfileHash": "8ac565e3",
-  "browserHash": "b5386f5e",
+  "hash": "672a405b",
+  "configHash": "8f8a77af",
+  "lockfileHash": "a86ad21f",
+  "browserHash": "4331be41",
   "optimized": {
     "@vue/devtools-api": {
-      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.7.2/node_modules/@vue/devtools-api/dist/index.js",
+      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.7.9/node_modules/@vue/devtools-api/dist/index.js",
       "file": "@vue_devtools-api.js",
-      "fileHash": "118e3ae6",
+      "fileHash": "473e98b5",
       "needsInterop": false
     },
     "@vuepress/shared": {
       "src": "../../../../node_modules/.pnpm/@vuepress+shared@2.0.0-rc.21/node_modules/@vuepress/shared/dist/index.js",
       "file": "@vuepress_shared.js",
-      "fileHash": "771fbe09",
+      "fileHash": "82639b8e",
       "needsInterop": false
     },
     "vue": {
-      "src": "../../../../node_modules/.pnpm/vue@3.5.13/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../../node_modules/.pnpm/vue@3.5.27/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "19f50dd1",
+      "fileHash": "f7321402",
       "needsInterop": false
     },
     "vue-router": {
-      "src": "../../../../node_modules/.pnpm/vue-router@4.5.0_vue@3.5.13/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "src": "../../../../node_modules/.pnpm/vue-router@4.6.4_vue@3.5.27/node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "22b01c16",
+      "fileHash": "a3d439c0",
+      "needsInterop": false
+    },
+    "echarts": {
+      "src": "../../../../node_modules/.pnpm/echarts@6.0.0/node_modules/echarts/index.js",
+      "file": "echarts.js",
+      "fileHash": "5568c9e9",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-JN5NFW2R": {
-      "file": "chunk-JN5NFW2R.js"
+    "chunk-T534BEHM": {
+      "file": "chunk-T534BEHM.js"
+    },
+    "chunk-PZ5AY32C": {
+      "file": "chunk-PZ5AY32C.js"
     }
   }
 }

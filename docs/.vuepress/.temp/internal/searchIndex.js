@@ -107,6 +107,35 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "多叉树数据流动图",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.效果",
+        "slug": "_1-效果",
+        "link": "#_1-效果",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.数据",
+        "slug": "_2-数据",
+        "link": "#_2-数据",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.代码",
+        "slug": "_3-代码",
+        "link": "#_3-代码",
+        "children": []
+      }
+    ],
+    "path": "/post/stream.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "",
     "headers": [],
     "path": "/404.html",

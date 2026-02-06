@@ -2,8 +2,10 @@
 <h2 id="_1-使用vue" tabindex="-1"><a class="header-anchor" href="#_1-使用vue"><span>1.使用Vue</span></a></h2>
 <p><a href="https://vuepress.github.io/zh/guide/markdown.html#%E5%9C%A8-markdown-%E4%B8%AD%E4%BD%BF%E7%94%A8-vue" target="_blank" rel="noopener noreferrer">在markdown中使用vue</a></p>
 <p><a href="https://vuepress.github.io/zh/advanced/cookbook/markdown-and-vue-sfc.html" target="_blank" rel="noopener noreferrer">Markdown 与 Vue SFC</a></p>
-<CodeGroup>
-  <CodeGroupItem title="选项式">
+<CodeTabs id="12" :data='[{"id":"选项式"},{"id":"组合式"}]'>
+<template #title0="{ value, isActive }">选项式</template>
+<template #title1="{ value, isActive }">组合式</template>
+<template #tab0="{ value, isActive }">
 <div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token operator">&lt;</span>script<span class="token operator">></span></span>
 <span class="line"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span></span>
 <span class="line">  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span>
@@ -14,24 +16,16 @@
 <span class="line"><span class="token punctuation">}</span></span>
 <span class="line"><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-vue-html line-numbers-mode" data-highlighter="prismjs" data-ext="vue-html"><pre v-pre><code><span class="line">&lt;template&gt;</span>
-<span class="line">  &lt;button @click=&quot;count++&quot;&gt;Count is: {{ count }}&lt;/button&gt;</span>
-<span class="line">&lt;/template&gt;</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>  </CodeGroupItem>
-  <CodeGroupItem title="组合式">
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
+<template #tab1="{ value, isActive }">
 <div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token operator">&lt;</span>script setup<span class="token operator">></span></span>
 <span class="line"><span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span></span>
 <span class="line"></span>
 <span class="line"><span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span></span>
 <span class="line"><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-vue-html line-numbers-mode" data-highlighter="prismjs" data-ext="vue-html"><pre v-pre><code><span class="line">&lt;template&gt;</span>
-<span class="line">  &lt;button @click=&quot;count++&quot;&gt;Count is: {{ count }}&lt;/button&gt;</span>
-<span class="line">&lt;/template&gt;</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>  </CodeGroupItem>
-</CodeGroup>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
+</CodeTabs>
 <p><strong>结果展示</strong></p>
 <div class="demo">
   <button @click="count++">

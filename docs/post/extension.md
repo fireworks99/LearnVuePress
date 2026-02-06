@@ -17,8 +17,9 @@ date: '2024-08-09'
 
 
 
-<CodeGroup>
-  <CodeGroupItem title="选项式">
+::: code-tabs 
+
+@tab 选项式
 
 ```js
 <script>
@@ -38,9 +39,7 @@ export default {
 </template>
 ```
 
-  </CodeGroupItem>
-
-  <CodeGroupItem title="组合式">
+@tab 组合式
 
 ```js
 <script setup>
@@ -56,9 +55,7 @@ const count = ref(0)
 </template>
 ```
 
-  </CodeGroupItem>
-
-</CodeGroup>
+:::
 
 **结果展示**
 
