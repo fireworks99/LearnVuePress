@@ -20,7 +20,7 @@ export default defineUserConfig({
     }
   },
 
-  head: [['link', { rel: 'icon', href: '/img/favicon.png' }]],
+  head: [['link', { rel: 'icon', href: '/LearnVuePress/img/favicon.png' }]],
 
   theme: defaultTheme({
     logo: '/img/logo.gif',
