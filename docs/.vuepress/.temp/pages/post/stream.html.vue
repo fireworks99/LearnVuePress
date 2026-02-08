@@ -1,5 +1,5 @@
 <template><div><h2 id="_1-效果" tabindex="-1"><a class="header-anchor" href="#_1-效果"><span>1.效果</span></a></h2>
-<EChartsFlyLine :rawData="data" width="730px" height="460px" /><h2 id="_2-数据" tabindex="-1"><a class="header-anchor" href="#_2-数据"><span>2.数据</span></a></h2>
+<EChartsFlyLine :rawData="data" /><h2 id="_2-数据" tabindex="-1"><a class="header-anchor" href="#_2-数据"><span>2.数据</span></a></h2>
 <div class="language-javascript line-numbers-mode" data-highlighter="prismjs" data-ext="js"><pre v-pre><code><span class="line"><span class="token comment">//  data/stream.js</span></span>
 <span class="line"><span class="token keyword">const</span> rawData <span class="token operator">=</span> <span class="token punctuation">{</span></span>
 <span class="line">  <span class="token string-property property">"name"</span><span class="token operator">:</span> <span class="token string">"公司高层"</span><span class="token punctuation">,</span></span>

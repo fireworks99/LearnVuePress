@@ -29,7 +29,7 @@ export default {
     },
     width: {
       type: String,
-      default: '730px'
+      default: '100%'
     },
     height: {
       type: String,

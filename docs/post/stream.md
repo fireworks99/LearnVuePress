@@ -11,7 +11,7 @@ import data from '@docs/post/data/stream.json'
 
 ## 1.效果
 
-<EChartsFlyLine :rawData="data" width="730px" height="460px" />
+<EChartsFlyLine :rawData="data" />
 
 
 
